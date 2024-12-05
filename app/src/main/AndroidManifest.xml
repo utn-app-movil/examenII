@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
         <activity
+            android:name=".Yoh_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".yoh_LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
         <activity
