@@ -15,6 +15,12 @@
 
         <!-- Actividad de Validación -->
         <activity
+            android:name=".day_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".day_LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
 

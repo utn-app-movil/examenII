@@ -37,4 +37,27 @@
     <string name="jus_error_booking_room">Error booking the room.</string>
     <string name="jus_success_unbooking">Room unbooked successfully.</string>
     <string name="jus_error_unbooking_room">Error unbooking the room.</string>
+
+    <string name="day_login">Login</string>
+    <string name="day_login_empty_fields">Username and password cannot be empty.</string>
+    <string name="day_login_successful">Login successful!</string>
+    <string name="day_login_error">Invalid username or password.</string>
+    <string name="day_network_error">Network error: %1$s</string>
+    <string name="day_username_hint">Enter your username</string>
+    <string name="day_password_hint">Enter your password</string>
+    <string name="day_login_button">Log In</string>
+    <string name="day_refresh">Refresh</string>
+    <string name="day_room_name">Room Name</string>
+    <string name="day_room_capacity">Capacity: %1$d</string>
+    <string name="day_room_available">Available</string>
+    <string name="day_room_occupied">Occupied</string>
+    <string name="day_room_fetch_error">Error loading rooms: %1$s</string>
+    <string name="day_room_reserve_success">Room reserved successfully</string>
+    <string name="day_room_reserve_error">Failed to reserve room: %1$s</string>
+    <string name="day_room_release_success">Room released successfully</string>
+    <string name="day_room_release_error">Failed to release room: %1$s</string>
+    <string name="day_unknown_user">Unknown user</string>
+    <string name="day_rooms_loaded_success">Rooms loaded successfully</string>
+    <string name="day_no_rooms_available">No rooms available</string>
+    <string name="day_error_loading_rooms">Error loading rooms: %1$s</string>
 </resources>
