@@ -12,13 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
         <activity
-            android:name=".ValidateAuthActivity"
+            android:name=".juj_RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".searchDogs"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".juj_LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

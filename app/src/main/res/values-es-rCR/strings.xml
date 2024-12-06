@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="errorFields">Porfavor rellena todos los campos</string>
+    <string name="room_status_icon">Estado del cuarto</string>
 </resources>
