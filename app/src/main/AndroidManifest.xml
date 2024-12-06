@@ -29,6 +29,12 @@
             android:name=".day_LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".ken_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ken_LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
 
