@@ -1,5 +1,6 @@
 [versions]
 agp = "8.6.0"
+jakewhartonConverterKotlinxSerialization = "0.9.0"
 converterGson = "2.9.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -14,6 +15,7 @@ materialVersion = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.15.0" }
+jakewharton-converter-kotlinx-serialization = { module = "com.jakewharton.retrofit2:converter-kotlinx-serialization", version.ref = "jakewhartonConverterKotlinxSerialization" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

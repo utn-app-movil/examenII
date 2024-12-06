@@ -11,6 +11,11 @@
 
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+    <string name="ken_busy">Busy</string>
+    <string name="ken_free">Free</string>
+    <string name="ken_allfields">Complete all fields</string>
+    <string name="ken_errorauth">Authenticacion error</string>
+</resources>
     <string name="emma_login_title">Iniciar Sesión</string>
     <string name="emma_username_hint">Nombre de usuario</string>
     <string name="emma_password_hint">Contraseña</string>
