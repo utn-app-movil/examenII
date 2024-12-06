@@ -2,4 +2,14 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="emma_login_title">Login</string>
+    <string name="emma_username_hint">User</string>
+    <string name="emma_password_hint">Password</string>
+    <string name="emma_login_button">Login</string>
+    <string name="emma_login_error_empty">Please complete all fields</string>
+    <string name="emma_login_error_network">Network error</string>
+    <string name="emma_login_error_auth">Error when logging in</string>
+    <string name="emma_room_title">Room Management</string>
+    <string name="emma_refresh_button">Refresh</string>
+    <string name="emma_no_rooms_found">No rooms found</string>
 </resources>
