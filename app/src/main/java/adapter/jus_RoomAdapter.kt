@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import cr.ac.utn.appmovil.rooms.R
 import network.jus_Room
@@ -31,18 +32,32 @@ class jus_RoomAdapter(
 
     override fun getItemCount() = rooms.size
 
-    class RoomViewHolder(itemView: View, val onRoomClicked: (jus_Room) -> Unit) : RecyclerView.ViewHolder(itemView) {
+    class RoomViewHolder(itemView: View, private val onRoomClicked: (jus_Room) -> Unit) :
+        RecyclerView.ViewHolder(itemView) {
         private val tvName: TextView = itemView.findViewById(R.id.jus_tv_room_name)
         private val tvCapacity: TextView = itemView.findViewById(R.id.jus_tv_capacity)
         private val tvStatus: TextView = itemView.findViewById(R.id.jus_tv_status)
 
         fun bind(room: jus_Room) {
             tvName.text = room.room
-            tvCapacity.text = "Capacidad: ${room.capacity}"
-            tvStatus.text = if (room.is_busy && !room.user.isNullOrBlank()) {
-                "Ocupada por ${room.user}"
+            tvCapacity.text = itemView.context.getString(R.string.jus_room_capacity, room.capacity)
+
+            if (room.is_busy && !room.user.isNullOrBlank()) {
+                tvStatus.text = itemView.context.getString(R.string.jus_room_busy, room.user)
+                tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.jus_busy_color
+                    )
+                )
             } else {
-                "Disponible"
+                tvStatus.text = itemView.context.getString(R.string.jus_room_free)
+                tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.jus_available_color
+                    )
+                )
             }
 
             itemView.setOnClickListener {
@@ -51,3 +66,4 @@ class jus_RoomAdapter(
         }
     }
 }
+

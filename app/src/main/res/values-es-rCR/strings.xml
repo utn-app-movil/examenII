@@ -11,11 +11,21 @@
     <string name="network_error">Error: %1$s</string>
     <string name="jus_refresh_rooms">Refrescar Salas</string>
     <string name="jus_booking_successful">Sala reservada con éxito</string>
+    <string name="jus_busy_status">Ocupada por %1$s</string>
+    <string name="jus_free_status">Disponible</string>
+    <string name="jus_btn_refresh">Refrescar Salas</string>
+    <string name="jus_rooms_loaded">Salas cargadas correctamente.</string>
+    <string name="jus_error_loading_rooms">Error al cargar salas: %1$s</string>
     <string name="jus_unbooking_successful">Sala liberada con éxito</string>
     <string name="jus_error_booking">Error al reservar sala: %1$s</string>
     <string name="jus_error_unbooking">Error al liberar sala: %1$s</string>
-    <string name="jus_error_loading_rooms">Error al cargar salas: %1$s</string>
-    <string name="jus_busy_status">Ocupada por %1$s</string>
-    <string name="jus_free_status">Disponible</string>
+    <string name="jus_room_busy">Ocupada por %1$s</string>
+    <string name="jus_room_free">Disponible</string>
     <string name="jus_room_capacity">Capacidad: %1$d</string>
+    <string name="jus_server_error_no_valid_data">El servidor no devolvió datos válidos.</string>
+    <string name="jus_http_error_code">Error HTTP: %1$d</string>
+    <string name="jus_success_booking">Sala reservada con éxito.</string>
+    <string name="jus_error_booking_room">Error al reservar la sala.</string>
+    <string name="jus_success_unbooking">Sala liberada con éxito.</string>
+    <string name="jus_error_unbooking_room">Error al liberar la sala.</string>
 </resources>

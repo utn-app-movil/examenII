@@ -1,12 +1,8 @@
-// cr/ac/utn/appmovil/rooms/jus_Repository.kt
 package cr.ac.utn.appmovil.rooms
 
 import network.BookingRequest
-import network.GenericResponse
 import network.UnbookingRequest
 import network.jus_Room
-import network.jus_RoomsApiService
-import network.RoomsResponse
 import cr.ac.utn.rooms.api.jus_RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -14,41 +10,56 @@ import kotlinx.coroutines.withContext
 class jus_Repository {
     private val api = jus_RetrofitClient.instance
 
-    suspend fun getRooms(): Result<List<jus_Room>> = withContext(Dispatchers.IO) {
+    suspend fun getRooms(
+        serverError: String,
+        httpErrorTemplate: String
+    ): Result<List<jus_Room>> = withContext(Dispatchers.IO) {
         return@withContext try {
             val response = api.getRooms()
-            if (response.isSuccessful && response.body()?.responseCode == "SUCESSFUL") {
-                Result.success(response.body()?.data ?: emptyList())
+            val body = response.body()
+            if (response.isSuccessful && body?.responseCode == "SUCESSFUL") {
+                Result.success(body.data ?: emptyList())
+            } else if (response.isSuccessful) {
+                Result.failure(Exception(body?.message ?: serverError))
             } else {
-                Result.failure(Exception(response.body()?.message ?: "Error desconocido"))
+                Result.failure(Exception(String.format(httpErrorTemplate, response.code())))
             }
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
 
-    suspend fun bookRoom(roomId: String, username: String): Result<String> = withContext(Dispatchers.IO) {
+    suspend fun bookRoom(
+        roomId: String,
+        username: String,
+        successBooking: String,
+        errorBookingRoom: String
+    ): Result<String> = withContext(Dispatchers.IO) {
         return@withContext try {
             val response = api.bookRoom(BookingRequest(roomId, username))
             val body = response.body()
-            if (response.isSuccessful && body?.responseCode == "INFO_FOUND") {
-                Result.success(body.message ?: "Reservado con éxito")
+            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCESSFUL")) {
+                Result.success(body.message ?: successBooking)
             } else {
-                Result.failure(Exception(body?.message ?: "Error al reservar"))
+                Result.failure(Exception(body?.message ?: errorBookingRoom))
             }
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
 
-    suspend fun unbookRoom(roomId: String): Result<String> = withContext(Dispatchers.IO) {
+    suspend fun unbookRoom(
+        roomId: String,
+        successUnbooking: String,
+        errorUnbookingRoom: String
+    ): Result<String> = withContext(Dispatchers.IO) {
         return@withContext try {
             val response = api.unbookRoom(UnbookingRequest(roomId))
             val body = response.body()
-            if (response.isSuccessful && body?.responseCode == "INFO_FOUND") {
-                Result.success(body.message ?: "Liberado con éxito")
+            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCESSFUL")) {
+                Result.success(body.message ?: successUnbooking)
             } else {
-                Result.failure(Exception(body?.message ?: "Error al liberar la sala"))
+                Result.failure(Exception(body?.message ?: errorUnbookingRoom))
             }
         } catch (e: Exception) {
             Result.failure(e)
