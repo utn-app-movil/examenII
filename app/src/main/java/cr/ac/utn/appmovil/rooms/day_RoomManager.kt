@@ -1,5 +1,6 @@
 package cr.ac.utn.appmovil.rooms
 
+
 import day_api.day_RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -18,8 +19,9 @@ class day_RoomManager {
                 if (body?.responseCode == "SUCESSFUL") {
                     Result.success(body.data)
                 } else {
-
-                    Result.failure(Exception("Unexpected responseCode: ${body?.responseCode}. Message: ${body?.message}"))
+                    Result.failure(
+                        Exception(body?.message ?: "Unexpected response code.")
+                    )
                 }
             } else {
                 Result.failure(Exception("HTTP error: ${response.code()}"))
@@ -29,14 +31,13 @@ class day_RoomManager {
         }
     }
 
-
     suspend fun reserveRoom(roomId: String, username: String): Result<String> = withContext(Dispatchers.IO) {
         return@withContext try {
             val response = api.bookRoom(day_RoomBookingRequest(roomId, username))
             if (response.isSuccessful) {
                 val body = response.body()
                 if (body?.responseCode == "INFO_FOUND") {
-                    Result.success(body.message ?: "Room reserved successfully")
+                    Result.success(body.message ?: "")
                 } else {
                     Result.failure(Exception(body?.message ?: "Failed to reserve room"))
                 }
@@ -54,7 +55,7 @@ class day_RoomManager {
             if (response.isSuccessful) {
                 val body = response.body()
                 if (body?.responseCode == "INFO_FOUND") {
-                    Result.success(body.message ?: "Room released successfully")
+                    Result.success(body.message ?: "")
                 } else {
                     Result.failure(Exception(body?.message ?: "Failed to release room"))
                 }

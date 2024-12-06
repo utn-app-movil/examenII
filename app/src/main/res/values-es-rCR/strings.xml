@@ -12,5 +12,17 @@
     <string name="day_password_hint">Ingrese su contraseña</string>
     <string name="day_login_button">Iniciar sesión</string>
     <string name="day_refresh">Actualizar</string>
-
+    <string name="day_room_name">Nombre de la Sala</string>
+    <string name="day_room_capacity">Capacidad: %1$d</string>
+    <string name="day_room_available">Disponible</string>
+    <string name="day_room_occupied">Ocupada</string>
+    <string name="day_room_fetch_error">Error al cargar salas: %1$s</string>
+    <string name="day_room_reserve_success">Sala reservada exitosamente</string>
+    <string name="day_room_reserve_error">Error al reservar la sala: %1$s</string>
+    <string name="day_room_release_success">Sala liberada exitosamente</string>
+    <string name="day_room_release_error">Error al liberar la sala: %1$s</string>
+    <string name="day_unknown_user">Usuario desconocido</string>
+    <string name="day_rooms_loaded_success">Salas cargadas exitosamente</string>
+    <string name="day_no_rooms_available">No hay salas disponibles</string>
+    <string name="day_error_loading_rooms">Error al cargar las salas: %1$s</string>
 </resources>

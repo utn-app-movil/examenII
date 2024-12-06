@@ -10,16 +10,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tuempresa.tuapp.ui.day_RoomsAdapter
 import kotlinx.coroutines.launch
 
-
 class day_RoomsActivity : AppCompatActivity() {
 
     private lateinit var adapter: day_RoomsAdapter
     private val roomManager = day_RoomManager()
-    private val username = "student"
+    private lateinit var username: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_day_rooms)
+
+        username = intent.getStringExtra("LOGGED_IN_USER") ?: getString(R.string.day_unknown_user)
 
         val recyclerView = findViewById<RecyclerView>(R.id.day_recycler_rooms)
         val btnRefresh = findViewById<Button>(R.id.day_btn_refresh)
@@ -51,13 +52,13 @@ class day_RoomsActivity : AppCompatActivity() {
                         adapter.updateRooms(rooms)
                         Toast.makeText(
                             this@day_RoomsActivity,
-                            "Rooms loaded successfully",
+                            getString(R.string.day_rooms_loaded_success),
                             Toast.LENGTH_SHORT
                         ).show()
                     } else {
                         Toast.makeText(
                             this@day_RoomsActivity,
-                            "No rooms available",
+                            getString(R.string.day_no_rooms_available),
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -65,7 +66,7 @@ class day_RoomsActivity : AppCompatActivity() {
                 onFailure = { error ->
                     Toast.makeText(
                         this@day_RoomsActivity,
-                        "Error loading rooms: ${error.message}",
+                        getString(R.string.day_error_loading_rooms, error.message),
                         Toast.LENGTH_LONG
                     ).show()
                 }
@@ -78,15 +79,14 @@ class day_RoomsActivity : AppCompatActivity() {
             val result = roomManager.reserveRoom(roomId, username)
             result.fold(
                 onSuccess = { message ->
-                    Toast.makeText(this@day_RoomsActivity, message, Toast.LENGTH_SHORT).show()
-                    loadRooms()
-                },
-                onFailure = { error ->
                     Toast.makeText(
                         this@day_RoomsActivity,
-                        "Error reserving room: ${error.message}",
+                        message.ifBlank { getString(R.string.day_room_reserve_success) },
                         Toast.LENGTH_SHORT
                     ).show()
+                },
+                onFailure = { error ->
+                    error.printStackTrace()
                 }
             )
         }
@@ -97,15 +97,14 @@ class day_RoomsActivity : AppCompatActivity() {
             val result = roomManager.releaseRoom(roomId)
             result.fold(
                 onSuccess = { message ->
-                    Toast.makeText(this@day_RoomsActivity, message, Toast.LENGTH_SHORT).show()
-                    loadRooms()
-                },
-                onFailure = { error ->
                     Toast.makeText(
                         this@day_RoomsActivity,
-                        "Error releasing room: ${error.message}",
+                        message.ifBlank { getString(R.string.day_room_release_success) },
                         Toast.LENGTH_SHORT
                     ).show()
+                },
+                onFailure = { error ->
+                    error.printStackTrace()
                 }
             )
         }

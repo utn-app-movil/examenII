@@ -9,31 +9,30 @@
         android:id="@+id/day_roomName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Room Name"
+        android:text="@string/day_room_name"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/day_roomStatus"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/day_roomCapacity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Capacity: 6"
+        android:text="@string/day_room_capacity"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/day_roomName"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/day_roomStatus"
+        app:layout_constraintTop_toBottomOf="@id/day_roomName" />
 
     <TextView
         android:id="@+id/day_roomStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Available"
+        android:text="@string/day_room_available"
         android:textSize="14sp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/day_roomCapacity"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

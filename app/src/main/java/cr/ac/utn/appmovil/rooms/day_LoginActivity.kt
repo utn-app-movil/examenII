@@ -41,7 +41,9 @@ class day_LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val token = response.body()?.token
                     Toast.makeText(this@day_LoginActivity, getString(R.string.day_login_successful), Toast.LENGTH_SHORT).show()
+
                     val intent = Intent(this@day_LoginActivity, day_RoomsActivity::class.java)
+                    intent.putExtra("LOGGED_IN_USER", username)
                     startActivity(intent)
                     finish()
                 } else {
@@ -55,3 +57,4 @@ class day_LoginActivity : AppCompatActivity() {
         })
     }
 }
+

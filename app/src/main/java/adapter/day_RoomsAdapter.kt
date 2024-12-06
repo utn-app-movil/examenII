@@ -40,19 +40,19 @@ class day_RoomsAdapter(
 
         fun bind(room: day_Room) {
             roomName.text = room.room
-            roomCapacity.text = "Capacity: ${room.capacity}"
-            roomStatus.text = if (room.is_busy) "Occupied" else "Available"
+            roomCapacity.text = itemView.context.getString(R.string.day_room_capacity, room.capacity)
+            roomStatus.text = if (room.is_busy) {
+                itemView.context.getString(R.string.day_room_occupied)
+            } else {
+                itemView.context.getString(R.string.day_room_available)
+            }
 
             roomStatus.setTextColor(
                 if (room.is_busy) Color.RED else Color.GREEN
             )
 
             itemView.setOnClickListener {
-                try {
-                    onRoomClicked(room)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
+                onRoomClicked(room)
             }
         }
     }
