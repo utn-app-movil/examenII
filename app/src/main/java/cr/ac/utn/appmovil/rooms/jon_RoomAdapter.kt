@@ -1,18 +1,23 @@
 package cr.ac.utn.appmovil.rooms
 
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class jon_RoomAdapter(
     private val jonRooms: List<jon_Room>,
-    private val onRoomSelected: (jon_Room) -> Unit,  // Eliminar esta línea
-    private val onBookRoom: (jon_Room) -> Unit,
-    private val onReleaseRoom: (jon_Room) -> Unit
+    private val api: RoomsApi,
+    private val username: String?,
+    private val loadRooms: () -> Unit
 ) : RecyclerView.Adapter<jon_RoomAdapter.RoomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder {
@@ -42,11 +47,71 @@ class jon_RoomAdapter(
             reserveButton.text = if (jonRoom.is_busy) "Liberar" else "Reservar"
             reserveButton.setOnClickListener {
                 if (jonRoom.is_busy) {
-                    onReleaseRoom(jonRoom)
+                    releaseRoom(jonRoom)
                 } else {
-                    onBookRoom(jonRoom)
+                    bookRoom(jonRoom)
                 }
+
+                reserveButton.postDelayed({
+                    loadRooms()
+                }, 1000)
             }
+        }
+
+
+
+
+        private fun bookRoom(jonRoom: jon_Room) {
+            if (username.isNullOrEmpty()) {
+                Toast.makeText(itemView.context, "Usuario no autenticado", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            val json = mapOf(
+                "room" to jonRoom.room,
+                "username" to username
+            )
+
+            api.bookRoom(json)
+                .enqueue(object : Callback<jon_ApiResponsebookRoom> {
+                    override fun onResponse(call: Call<jon_ApiResponsebookRoom>, response: Response<jon_ApiResponsebookRoom>) {
+                        if (response.isSuccessful && response.body()?.responseCode == "SUCESSFUL") {
+                            Toast.makeText(
+                                itemView.context,
+                                "Sala reservada exitosamente.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            loadRooms()
+                        } else {
+                            Toast.makeText(itemView.context, "Error al reservar.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<jon_ApiResponsebookRoom>, t: Throwable) {
+                        Toast.makeText(itemView.context, "Error de red: ${t.message}", Toast.LENGTH_SHORT).show()
+                        Log.e("RoomAdapter", "Error: ${t.message}")
+                    }
+                })
+        }
+
+        private fun releaseRoom(jonRoom: jon_Room) {
+            val json = mapOf("room" to jonRoom.room)
+            api.releaseRoom(json)
+                .enqueue(object : Callback<jon_ApiResponsebookRoom> {
+                    override fun onResponse(call: Call<jon_ApiResponsebookRoom>, response: Response<jon_ApiResponsebookRoom>) {
+                        if (response.isSuccessful && response.body()?.responseCode == "SUCESSFUL") {
+                            Toast.makeText(itemView.context, "Sala liberada.", Toast.LENGTH_SHORT).show()
+                            loadRooms()
+                        } else {
+                            Toast.makeText(itemView.context, "Error al liberar.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<jon_ApiResponsebookRoom>, t: Throwable) {
+                        Toast.makeText(itemView.context, "Error de red: ${t.message}", Toast.LENGTH_SHORT).show()
+                        Log.e("RoomAdapter", "Error: ${t.message}")
+                    }
+                })
         }
     }
 }

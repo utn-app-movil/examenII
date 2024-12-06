@@ -19,7 +19,7 @@ interface RoomsApi {
     fun bookRoom(@Body room: Map<String, String>): Call<jon_ApiResponsebookRoom>
 
     @PUT("rooms/unbooking")
-    fun releaseRoom(@Body room: Map<String, String>): Call<jon_ApiResponse>
+    fun releaseRoom(@Body room: Map<String, String>): Call<jon_ApiResponsebookRoom>
 }
 
 data class BookRoomRequest(val username: String, val room: String)
