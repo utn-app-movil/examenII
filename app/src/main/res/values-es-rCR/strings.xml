@@ -2,4 +2,11 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar sesión</string>
+    <string name="login_empty_fields">Por favor, ingrese todos los datos.</string>
+    <string name="login_successful">Logueo exitoso!</string>
+    <string name="login_error">Usuario o contraseña incorrectos.</string>
+    <string name="network_error">Error: %1$s</string>
 </resources>

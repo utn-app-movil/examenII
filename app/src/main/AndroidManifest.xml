@@ -18,7 +18,13 @@
             android:name=".searchDogs"
             android:exported="false" />
         <activity
+            android:name=".jus_HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jus_LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

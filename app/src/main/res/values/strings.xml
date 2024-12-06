@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="login_empty_fields">Please fill in all the fields.</string>
+    <string name="login_successful">Login successful!</string>
+    <string name="login_error">Incorrect username or password.</string>
+    <string name="network_error">Error: %1$s</string>
 </resources>
