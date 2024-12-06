@@ -15,7 +15,7 @@
             android:name=".mjo_ValidateAuthActivity"
             android:exported="false" />
         <activity
-            android:name=".mjo_searchDogs"
+            android:name=".mjo_ReservationRoomActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
