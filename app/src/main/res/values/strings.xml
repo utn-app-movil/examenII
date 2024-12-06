@@ -11,6 +11,8 @@
 
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+    <string name="errorFields">Please enter all fields</string>
+    <string name="room_status_icon">Room Status</string>
     <string name="ken_busy">Busy</string>
     <string name="ken_free">Free</string>
     <string name="ken_allfields">Complete all fields</string>

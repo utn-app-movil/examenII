@@ -49,6 +49,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
 
+    // Retrofin converter
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
     // OkHttp para manejo de solicitudes HTTP
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

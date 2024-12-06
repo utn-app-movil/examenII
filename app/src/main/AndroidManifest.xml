@@ -44,14 +44,6 @@
         <activity
             android:name=".ken_LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".ValidateAuthActivity"
-            android:exported="false" />
-
-        <!-- Actividad de Búsqueda -->
-        <activity
-            android:name=".searchDogs"
-            android:exported="false" />
 
         <!-- Actividad Principal -->
         <activity
@@ -74,10 +66,18 @@
             android:name=".emma_LoginActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".juj_LoginActivity"
+            android:exported="true" />
+
         <!-- Actividad de Gestión de Salas -->
         <activity
             android:name=".emma_RoomActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".juj_RoomActivity"
+            android:exported="true" />
 
         <activity
             android:name=".yoh_Main"
@@ -85,7 +85,6 @@
         <activity
             android:name=".yoh_Login"
             android:exported="false" />
-
 
     </application>
 </manifest>
