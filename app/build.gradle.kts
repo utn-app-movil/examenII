@@ -58,6 +58,9 @@ dependencies {
 
     // Glide para cargar imágenes
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.espresso.remote)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.firebase.firestore.ktx)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     // Material Components para diseño moderno

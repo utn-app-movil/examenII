@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dey_roomNameTextView" type="id">dey</item>
+    <item name="dey_roomActionButton" type="id">deyy</item>
+    <item name="roomStatusTextView" type="id">rommsss</item>
+</resources>
