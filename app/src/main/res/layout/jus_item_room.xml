@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/jus_card_background">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/jus_tv_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/jus_text_primary"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+
+        <TextView
+            android:id="@+id/jus_tv_capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/jusRoomCapacityText"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/jus_divider"/>
+
+        <TextView
+            android:id="@+id/jus_tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/jusRoomStatusText"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

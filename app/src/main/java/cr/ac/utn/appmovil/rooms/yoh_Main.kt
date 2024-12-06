@@ -33,7 +33,7 @@ class yoh_Main : AppCompatActivity() {
         adapter = yoh_Adapter(mutableListOf()) { room ->
             if (room.is_busy) unbookRoom(room.room) else bookRoom(room.room)
         }
-        recyclerView.layoutManager = GridLayoutManager(this, 2) // Muestra las habitaciones en 2 columnas
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = adapter
     }
 

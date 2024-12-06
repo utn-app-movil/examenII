@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#54E600</color>
-    <color name="purple_500">#F700FF00</color>
-    <color name="purple_700">#CFFF00</color>
-    <color name="teal_200">#000000</color>
-    <color name="teal_700">#51BABA</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="jus_card_background">#FFFFFF</color>
+    <color name="jus_text_primary">#000000</color>
+    <color name="jus_text_secondary">#000000</color>
+    <color name="jus_available_color">#00FF00</color>
+    <color name="jus_busy_color">#FF0000</color>
+    <color name="jus_divider">#CCCCCC</color>
     <color name="yoh_ORANGE_color">#FF0000</color>
     <color name="yoh_light.blue_color">#84FD03</color>
     <color name="background_color">#F20000</color>
-
-
-
 </resources>
