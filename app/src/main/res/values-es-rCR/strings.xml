@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="pau_username">nombre de usuario</string>
+    <string name="pau_password">contraseña</string>
+    <string name="pau_login_btn">boton de logueo</string>
+    <string name="pau_refresh_btn">refrescar</string>
+    <string name="pau_RecycleView">contenedor</string>
 </resources>

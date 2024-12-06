@@ -15,6 +15,13 @@
             android:name=".ValidateAuthActivity"
             android:exported="false" />
         <activity
+            android:name=".pau_salasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pau_MainActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".searchDogs"
             android:exported="false" />
         <activity
@@ -25,6 +32,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
         </activity>
     </application>
 

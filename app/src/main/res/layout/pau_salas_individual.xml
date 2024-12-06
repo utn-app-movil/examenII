@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="#F5F5F5"> <!-- Cambiado a #F5F5F5 -->
+
+    <TextView
+        android:id="@+id/roomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Name"
+        android:textSize="18sp"
+        android:textColor="#333333" /> <!-- Cambiado a #333333 -->
+
+    <TextView
+        android:id="@+id/roomStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Disponible"
+        android:textSize="16sp"
+        android:textColor="#4CAF50" />
+</RelativeLayout>

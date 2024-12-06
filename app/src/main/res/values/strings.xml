@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+    <string name="pau_username">username</string>
+    <string name="pau_password">password</string>
+    <string name="pau_login_btn">login button</string>
+    <string name="pau_refresh_btn">refresh button</string>
+    <string name="pau_RecycleView">container</string>
 </resources>
