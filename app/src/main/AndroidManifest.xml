@@ -12,26 +12,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
+
         <activity
-            android:name=".juj_RoomActivity"
+            android:name=".dor_room_list"
             android:exported="false" />
 
         <activity
-            android:name=".juj_LoginActivity"
+            android:name=".dor_Login_user"
+            android:exported="false"/>
+
+        <!-- Actividad de Validación -->
+        <activity
+            android:name=".day_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".day_LoginActivity"
+            android:exported="false" />
+
+        <!-- Actividad Principal -->
+        <activity
+            android:name=".jus_MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jus_LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!-- Actividad de Login -->
         <activity
-            android:name=".MainActivity"
+            android:name=".emma_LoginActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".juj_LoginActivity"
+            android:exported="true" />
+
+        <!-- Actividad de Gestión de Salas -->
+        <activity
+            android:name=".emma_RoomActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".juj_RoomActivity"
+            android:exported="true" />
 
     </application>
 
