@@ -2,4 +2,8 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="ken_busy">Ocupada</string>
+    <string name="ken_free">Disponible</string>
+    <string name="ken_allfields">Complete todos los cambios</string>
+    <string name="ken_errorauth">Error de autenticacion</string>
 </resources>
