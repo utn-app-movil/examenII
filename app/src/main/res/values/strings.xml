@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+    <string name="emma_login_title">Iniciar Sesión</string>
+    <string name="emma_username_hint">Nombre de usuario</string>
+    <string name="emma_password_hint">Contraseña</string>
+    <string name="emma_login_button">Iniciar sesión</string>
+    <string name="emma_login_error_empty">Por favor, complete todos los campos</string>
+    <string name="emma_login_error_network">Error de red: %1$s</string>
+    <string name="emma_login_error_auth">Error al iniciar sesión</string>
+    <string name="emma_room_title">Gestión de Salas</string>
+    <string name="emma_refresh_button">Refrescar</string>
+    <string name="emma_no_rooms_found">No se encontraron salas</string>
 
     <string name="day_login">Login</string>
     <string name="day_login_empty_fields">Username and password cannot be empty.</string>
