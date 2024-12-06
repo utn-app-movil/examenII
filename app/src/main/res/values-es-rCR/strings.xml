@@ -2,4 +2,12 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+    <string name="txt_id">Nombre</string>
+    <string name="txt_password">conraseña</string>
+    <string name="btn_login">Iniciar sesion</string>
+    <string name="wrong">Algo salio mal</string>
+    <string name="welc">Bienvenido</string>
+    <string name="auth_faile">Error de autenticacion</string>
+    <string name="server_error">errormdel servidor</string>
+    <string name="connection_error">error de conexion</string>
 </resources>
