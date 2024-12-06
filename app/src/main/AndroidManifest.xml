@@ -31,6 +31,12 @@
 
         <!-- Actividad Principal -->
         <activity
+            android:name=".jus_MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jus_LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
