@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
         <activity
-            android:name=".loginActivity"
+            android:name=".dan_Main"
             android:exported="false" />
         <activity
-            android:name=".ValidateAuthActivity"
-            android:exported="false" />
-        <activity
-            android:name=".searchDogs"
+            android:name=".roomsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
