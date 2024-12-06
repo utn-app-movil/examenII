@@ -29,6 +29,9 @@
             android:name=".day_LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".ZayMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
 
