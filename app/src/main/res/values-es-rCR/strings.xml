@@ -2,4 +2,15 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+
+    <string name="day_login">Iniciar sesión</string>
+    <string name="day_login_empty_fields">El usuario y la contraseña no pueden estar vacíos.</string>
+    <string name="day_login_successful">¡Inicio de sesión exitoso!</string>
+    <string name="day_login_error">Usuario o contraseña inválidos.</string>
+    <string name="day_network_error">Error de red: %1$s</string>
+    <string name="day_username_hint">Ingrese su usuario</string>
+    <string name="day_password_hint">Ingrese su contraseña</string>
+    <string name="day_login_button">Iniciar sesión</string>
+    <string name="day_refresh">Actualizar</string>
+
 </resources>

@@ -12,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
         <activity
+            android:name=".day_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
         <activity
             android:name=".searchDogs"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".day_LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

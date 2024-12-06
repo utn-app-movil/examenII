@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
+
+    <string name="day_login">Login</string>
+    <string name="day_login_empty_fields">Username and password cannot be empty.</string>
+    <string name="day_login_successful">Login successful!</string>
+    <string name="day_login_error">Invalid username or password.</string>
+    <string name="day_network_error">Network error: %1$s</string>
+    <string name="day_username_hint">Enter your username</string>
+    <string name="day_password_hint">Enter your password</string>
+    <string name="day_login_button">Log In</string>
+    <string name="day_refresh">Refresh</string>
+
 </resources>
