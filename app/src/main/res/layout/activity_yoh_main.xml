@@ -2,17 +2,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <Button
-        android:id="@+id/yoh_btn_refresh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/yoh_refresh" />
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/design_default_color_secondary">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/yoh_recycler_rooms"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/yoh_btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yoh_string_refresh"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_refresh" />
 </LinearLayout>

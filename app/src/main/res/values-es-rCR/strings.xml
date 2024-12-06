@@ -1,29 +1,26 @@
 <resources>
-    <string name="app_name">Gestión de Salas</string>
-    <string name="network_error">Error de red: %1$s</string>
-    <string name="yoh_login_empty_fields">Por favor, complete todos los campos</string>
-    <string name="yoh_login_successful">Inicio de sesión exitoso</string>
-    <string name="yoh_login_error">Error al iniciar sesión</string>
-    <string name="yoh_username">Usuario</string>
-    <string name="yoh_password">Contraseña</string>
-    <string name="yoh_btn_login">Iniciar sesión</string>
-    <string name="yoh_rooms_loaded">Las salas se cargaron correctamente</string>
-    <string name="yoh_error_loading_rooms">Error al cargar salas: %1$s</string>
-    <string name="yoh_success_booking">Sala reservada con éxito</string>
-    <string name="yoh_error_booking_room">Error al reservar la sala</string>
-    <string name="yoh_success_unbooking">Sala liberada con éxito</string>
-    <string name="yoh_error_unbooking_room">Error al liberar la sala</string>
-    <string name="yoh_btn_refresh">Refrescar</string>
-    <string name="yoh_room_capacity">Capacidad: %1$d</string>
-    <string name="yoh_room_free">Disponible</string>
-    <string name="yoh_room_busy">Ocupada por %1$s</string>
-    <string name="yoh_server_error_no_valid_data">No se pudieron obtener datos válidos del servidor</string>
-    <string name="yoh_http_error_code">Error HTTP: %1$s</string>
-    <string name="yoh_refresh">Refrescar</string>
-    <string name="yoh_network_error">Error de red: %1$s</string>
-    <string name="yoh_error_booking">Error al reservar la sala</string>
-    <string name="yoh_error_unbooking">Error al liberar la sala</string>
 
-
-
+    <string name="yoh_string_app_name">Gestión de Salas</string>
+    <string name="yoh_string_username">Usuario</string>
+    <string name="yoh_string_password">Contraseña</string>
+    <string name="yoh_string_btn_login">Iniciar sesión</string>
+    <string name="yoh_string_login_empty_fields">Por favor, complete todos los campos</string>
+    <string name="yoh_string_login_successful">Inicio de sesión exitoso</string>
+    <string name="yoh_string_login_error">Error durante el inicio de sesión</string>
+    <string name="yoh_string_network_error">Error de red: %1$s</string>
+    <string name="yoh_string_rooms_loaded">Salas cargadas con éxito</string>
+    <string name="yoh_string_error_loading_rooms">Error al cargar las salas: %1$s</string>
+    <string name="yoh_string_success_booking">Sala reservada con éxito</string>
+    <string name="yoh_string_error_booking_room">Error al reservar la sala</string>
+    <string name="yoh_string_success_unbooking">Sala liberada con éxito</string>
+    <string name="yoh_string_error_unbooking_room">Error al liberar la sala</string>
+    <string name="yoh_string_btn_refresh">Actualizar</string>
+    <string name="yoh_string_room_capacity">Capacidad: %1$d</string>
+    <string name="yoh_string_room_free">Disponible</string>
+    <string name="yoh_string_room_busy">Ocupada por %1$s</string>
+    <string name="yoh_string_server_error_no_valid_data">No se recuperaron datos válidos del servidor</string>
+    <string name="yoh_string_http_error_code">Error HTTP: %1$s</string>
+    <string name="yoh_string_refresh">Actualizar</string>
+    <string name="yoh_string_error_booking">Error al reservar la sala: %1$s</string>
+    <string name="yoh_string_error_unbooking">Error al liberar la sala: %1$s</string>
 </resources>

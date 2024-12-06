@@ -1,12 +1,14 @@
 package cr.ac.utn.appmovil.rooms
 
-import network.yoh_BookingRequest
-import network.yoh_UnbookingRequest
-import network.yoh_Room
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import model.yoh_BookingRequest
+import network.yoh_RetrofitClient
+import model.yoh_Room
+import model.yoh_UnbookingRequest
 
-class yoh_Repository {
+
+class yoh_API {
     private val api = yoh_RetrofitClient.instance
 
     suspend fun getRooms(
@@ -16,7 +18,7 @@ class yoh_Repository {
         return@withContext try {
             val response = api.getRooms()
             val body = response.body()
-            if (response.isSuccessful && (body?.responseCode == "SUCCESSFUL" || body?.responseCode == "INFO_FOUND")) {
+            if (response.isSuccessful && (body?.responseCode == "SUCESSFUL" || body?.responseCode == "INFO_FOUND")) {
                 Result.success(body.data ?: emptyList())
             } else if (response.isSuccessful) {
                 Result.failure(Exception(body?.message ?: serverError))
@@ -37,7 +39,7 @@ class yoh_Repository {
         return@withContext try {
             val response = api.bookRoom(yoh_BookingRequest(roomId, username))
             val body = response.body()
-            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCCESSFUL")) {
+            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCESSFUL")) {
                 Result.success(body.message ?: successBooking)
             } else {
                 Result.failure(Exception(body?.message ?: errorBookingRoom))
@@ -55,7 +57,7 @@ class yoh_Repository {
         return@withContext try {
             val response = api.unbookRoom(yoh_UnbookingRequest(roomId))
             val body = response.body()
-            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCCESSFUL")) {
+            if (response.isSuccessful && (body?.responseCode == "INFO_FOUND" || body?.responseCode == "SUCESSFUL")) {
                 Result.success(body.message ?: successUnbooking)
             } else {
                 Result.failure(Exception(body?.message ?: errorUnbookingRoom))
