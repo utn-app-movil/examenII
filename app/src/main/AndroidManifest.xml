@@ -79,5 +79,13 @@
             android:name=".emma_RoomActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".yoh_Main"
+            android:exported="false" />
+        <activity
+            android:name=".yoh_Login"
+            android:exported="false" />
+
+
     </application>
 </manifest>
