@@ -1,6 +1,5 @@
-package cr.ac.utn.rooms.api
+package network
 
-import network.jus_RoomsApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

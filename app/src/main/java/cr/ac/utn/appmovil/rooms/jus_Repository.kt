@@ -3,9 +3,9 @@ package cr.ac.utn.appmovil.rooms
 import network.BookingRequest
 import network.UnbookingRequest
 import network.jus_Room
-import cr.ac.utn.rooms.api.jus_RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import network.jus_RetrofitClient
 
 class jus_Repository {
     private val api = jus_RetrofitClient.instance
@@ -17,7 +17,7 @@ class jus_Repository {
         return@withContext try {
             val response = api.getRooms()
             val body = response.body()
-            if (response.isSuccessful && body?.responseCode == "SUCESSFUL") {
+            if (response.isSuccessful && (body?.responseCode == "SUCESSFUL" || body?.responseCode == "INFO_FOUND")) {
                 Result.success(body.data ?: emptyList())
             } else if (response.isSuccessful) {
                 Result.failure(Exception(body?.message ?: serverError))

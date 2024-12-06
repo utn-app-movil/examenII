@@ -6,9 +6,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import cr.ac.utn.rooms.api.jus_RetrofitClient
 import network.AuthRequest
 import network.AuthResponse
+import network.jus_RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -40,7 +40,6 @@ class jus_MainActivity : AppCompatActivity() {
             loadRooms()
         }
 
-        loadRooms()
     }
 
     private fun loadRooms() {
@@ -80,7 +79,6 @@ class jus_MainActivity : AppCompatActivity() {
             result.fold(
                 onSuccess = { message ->
                     Toast.makeText(this@jus_MainActivity, message, Toast.LENGTH_LONG).show()
-                    loadRooms()
                 },
                 onFailure = { error ->
                     Toast.makeText(
@@ -103,7 +101,6 @@ class jus_MainActivity : AppCompatActivity() {
             result.fold(
                 onSuccess = { message ->
                     Toast.makeText(this@jus_MainActivity, message, Toast.LENGTH_LONG).show()
-                    loadRooms()
                 },
                 onFailure = { error ->
                     Toast.makeText(
