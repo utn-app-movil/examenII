@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cr.ac.utn.appmovil.rooms">
 
+    <!-- Permiso para acceder a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
+
         <!--Activity de Bairon Vega -->
         <activity
             android:name=".bai_MainActivity"
@@ -20,21 +22,56 @@
             android:name=".bai_LoginActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".dor_room_list"
+            android:exported="false" />
+
+        <activity
+            android:name=".dor_Login_user"
+            android:exported="false"/>
+
+        <!-- Actividad de Validación -->
+        <activity
+            android:name=".day_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".day_LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".ValidateAuthActivity"
             android:exported="false" />
+
+        <!-- Actividad de Búsqueda -->
         <activity
             android:name=".searchDogs"
+            android:exported="false" />
+
+        <!-- Actividad Principal -->
+        <activity
+            android:name=".jus_MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jus_LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Actividad de Login -->
+        <activity
+            android:name=".emma_LoginActivity"
+            android:exported="true" />
+
+        <!-- Actividad de Gestión de Salas -->
+        <activity
+            android:name=".emma_RoomActivity"
+            android:exported="false" />
+
+    </application>
 </manifest>
