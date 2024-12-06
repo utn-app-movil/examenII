@@ -16,4 +16,7 @@
     <color name="jus_divider">#CCCCCC</color>
     <color name="bai_green_color">#00FF00</color>
     <color name="bai_red_color">#FF0000</color>
+    <color name="yoh_ORANGE_color">#FF0000</color>
+    <color name="yoh_light.blue_color">#84FD03</color>
+    <color name="background_color">#F20000</color>
 </resources>

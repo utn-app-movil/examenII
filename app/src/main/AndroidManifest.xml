@@ -38,7 +38,6 @@
         <activity
             android:name=".day_LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".ken_RoomsActivity"
             android:exported="false" />
@@ -80,6 +79,12 @@
             android:name=".juj_RoomActivity"
             android:exported="true" />
 
-    </application>
+        <activity
+            android:name=".yoh_Main"
+            android:exported="false" />
+        <activity
+            android:name=".yoh_Login"
+            android:exported="false" />
 
+    </application>
 </manifest>
