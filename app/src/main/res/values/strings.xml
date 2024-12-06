@@ -8,4 +8,13 @@
     <string name="login_successful">Login successful!</string>
     <string name="login_error">Incorrect username or password.</string>
     <string name="network_error">Error: %1$s</string>
+    <string name="jus_refresh_rooms">Refrescar Salas</string>
+    <string name="jus_booking_successful">Sala reservada con éxito</string>
+    <string name="jus_unbooking_successful">Sala liberada con éxito</string>
+    <string name="jus_error_booking">Error al reservar sala: %1$s</string>
+    <string name="jus_error_unbooking">Error al liberar sala: %1$s</string>
+    <string name="jus_error_loading_rooms">Error al cargar salas: %1$s</string>
+    <string name="jus_busy_status">Ocupada por %1$s</string>
+    <string name="jus_free_status">Disponible</string>
+    <string name="jus_room_capacity">Capacidad: %1$d</string>
 </resources>

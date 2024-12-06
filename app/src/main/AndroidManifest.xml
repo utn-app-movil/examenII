@@ -18,7 +18,7 @@
             android:name=".searchDogs"
             android:exported="false" />
         <activity
-            android:name=".jus_HomeActivity"
+            android:name=".jus_MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

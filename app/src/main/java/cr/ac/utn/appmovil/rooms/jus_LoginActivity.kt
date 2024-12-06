@@ -41,7 +41,8 @@ class jus_LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val token = response.body()?.token
                     Toast.makeText(this@jus_LoginActivity, getString(R.string.login_successful), Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@jus_LoginActivity, jus_HomeActivity::class.java)
+                    // Redirigimos a jus_MainActivity en lugar de jus_HomeActivity
+                    val intent = Intent(this@jus_LoginActivity, jus_MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
