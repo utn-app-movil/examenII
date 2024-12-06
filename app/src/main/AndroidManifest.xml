@@ -13,6 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
 
+        <!--Activity de Bairon Vega -->
+        <activity
+            android:name=".bai_MainActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".bai_LoginActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
         <activity
             android:name=".dor_room_list"
             android:exported="false" />
@@ -27,6 +37,13 @@
             android:exported="false" />
         <activity
             android:name=".day_LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ken_RoomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ken_LoginActivity"
             android:exported="false" />
 
         <!-- Actividad Principal -->

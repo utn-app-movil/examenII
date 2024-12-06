@@ -14,4 +14,6 @@
     <color name="jus_available_color">#00FF00</color>
     <color name="jus_busy_color">#FF0000</color>
     <color name="jus_divider">#CCCCCC</color>
+    <color name="bai_green_color">#00FF00</color>
+    <color name="bai_red_color">#FF0000</color>
 </resources>
