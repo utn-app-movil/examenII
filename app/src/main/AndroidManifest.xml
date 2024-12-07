@@ -46,13 +46,8 @@
             android:exported="false" />
 
         <!-- Actividad Principal -->
-        
- 
         <activity
-            android:name=".ValidateAuthActivity"
-
             android:name=".jus_MainActivity"
-
             android:exported="false" />
         <activity
             android:name=".jus_LoginActivity"
@@ -67,7 +62,10 @@
         </activity>
 
         <!-- Actividad de Login -->
-       <activity
+ 	<activity
+            android:name=".Key_Rooms"
+            android:exported="false" />
+ 	<activity
             android:name=".Key_Login"
             android:exported="false" />
         <activity
@@ -79,9 +77,6 @@
             android:exported="true" />
 
         <!-- Actividad de Gestión de Salas -->
-      <activity
-            android:name=".Key_Rooms"
-            android:exported="false" />
         <activity
             android:name=".emma_RoomActivity"
             android:exported="false" />
