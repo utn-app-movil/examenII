@@ -11,9 +11,6 @@
 
     <string name="app_name">Rooms</string>
     <string name="postRestApi">Post Rooms</string>
-  
-</resources>
-
     <string name="errorFields">Please enter all fields</string>
     <string name="room_status_icon">Room Status</string>
     <string name="ken_busy">Busy</string>
@@ -132,6 +129,7 @@
     <string name="yoh_string_refresh">Refresh</string>
     <string name="yoh_string_error_booking">Error booking the room: %1$s</string>
     <string name="yoh_string_error_unbooking">Error unbooking the room: %1$s</string>
+
 <!-- Strings Keylor -->
     <string name="Key_msg_loginSu">login successfully: %1$s</string>
     <string name="Key_msg_Inco_creden">Incorrect credentials</string>
