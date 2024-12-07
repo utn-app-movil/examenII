@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restapi">
         <activity
+            android:name=".dan_item_room"
+            android:exported="false" />
+        <activity
             android:name=".dan_Main"
             android:exported="false" />
         <activity
-            android:name=".roomsActivity"
+            android:name=".rooms_dan_Activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

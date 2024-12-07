@@ -2,7 +2,6 @@ package cr.ac.utn.appmovil.rooms
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +22,7 @@ class dan_Main : AppCompatActivity() {
         }
         dan_btnGoRoom = findViewById<Button>(R.id.dan_goRoom)
         dan_btnGoRoom.setOnClickListener {
-            val intent = Intent(this, roomsActivity::class.java)
+            val intent = Intent(this, rooms_dan_Activity::class.java)
             startActivity(intent)
         }
     }
