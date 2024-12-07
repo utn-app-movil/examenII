@@ -62,6 +62,12 @@
         </activity>
 
         <!-- Actividad de Login -->
+ 	<activity
+            android:name=".Key_Rooms"
+            android:exported="false" />
+ 	<activity
+            android:name=".Key_Login"
+            android:exported="false" />
         <activity
             android:name=".emma_LoginActivity"
             android:exported="true" />

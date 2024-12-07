@@ -2,6 +2,13 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
+  
+  
+  
+  
+  
+
+
     <string name="errorFields">Porfavor rellena todos los campos</string>
     <string name="room_status_icon">Estado del cuarto</string>
     <string name="ken_busy">Ocupada</string>
@@ -130,5 +137,14 @@
     <string name="yoh_string_refresh">Actualizar</string>
     <string name="yoh_string_error_booking">Error al reservar la sala: %1$s</string>
     <string name="yoh_string_error_unbooking">Error al liberar la sala: %1$s</string>
-
+<!-- Strings Keylor -->
+    <string name="Key_msg_loginSu">Inicie sesión correctamente: %1$s</string>
+    <string name="Key_msg_Inco_creden">Credenciales incorrectas</string>
+    <string name="Key_msg_net_error">Error de red: %1$s</string>
+    <string name="Key_msg_complete_info">Por favor completa los campos</string>
+    <string name="Key_msg_unauthenticate_user">usuario no autenticado</string>
+    <string name="Key_msg_select_room">seleccione una sala</string>
+    <string name="Key_msg_reserved_room">sala reservada</string>
+    <string name="Key_msg_error_rom">"Error al reservar la sala "</string>
+    <string name="Key_msg_room_released">sala liberada</string>
 </resources>

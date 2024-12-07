@@ -130,4 +130,16 @@
     <string name="yoh_string_error_booking">Error booking the room: %1$s</string>
     <string name="yoh_string_error_unbooking">Error unbooking the room: %1$s</string>
 
+<!-- Strings Keylor -->
+    <string name="Key_msg_loginSu">login successfully: %1$s</string>
+    <string name="Key_msg_Inco_creden">Incorrect credentials</string>
+    <string name="Key_msg_net_error">Network error: %1$s</string>
+    <string name="Key_msg_complete_info">Fill in the fields</string>
+    <string name="Key_msg_unauthenticate_user">unauthenticated user</string>
+    <string name="Key_msg_select_room">select a room</string>
+    <string name="Key_msg_reserved_room">reserved room</string>
+    <string name="Key_msg_error_rom">Error when booking the room</string>
+    <string name="Key_msg_room_released">room released</string>
+
 </resources>
+
