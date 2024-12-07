@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bai_LoginActivity">
+
+  <!-- Título de la pantalla -->
+  <TextView
+      android:id="@+id/bai_loginTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="250dp"
+      android:text="@string/bai_login_button_text"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Contenedor del campo ID -->
+  <TextView
+      android:id="@+id/bai_idLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/bai_username"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/bai_loginTitle" />
+
+  <EditText
+      android:id="@+id/bai_usernameEditText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="32dp"
+      android:hint="@string/bai_username"
+      android:inputType="text"
+      app:layout_constraintBaseline_toBaselineOf="@id/bai_idLabel"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/bai_idLabel"
+      app:layout_constraintTop_toTopOf="@id/bai_idLabel" />
+
+  <!-- Contenedor del campo Contraseña -->
+  <TextView
+      android:id="@+id/bai_passwordLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/bai_password"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/bai_usernameEditText" />
+
+  <EditText
+      android:id="@+id/bai_passwordEditText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="32dp"
+      android:hint="@string/bai_password"
+      android:inputType="textPassword"
+      app:layout_constraintBaseline_toBaselineOf="@id/bai_passwordLabel"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/bai_passwordLabel"
+      app:layout_constraintTop_toTopOf="@id/bai_passwordLabel" />
+
+  <!-- Botón de iniciar sesión -->
+  <Button
+      android:id="@+id/bai_loginBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="32dp"
+      android:text="@string/bai_login_button_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/bai_passwordEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
