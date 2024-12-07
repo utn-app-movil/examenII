@@ -2,11 +2,20 @@
 <resources>
     <string name="app_name">Salas</string>
     <string name="postRestApi">Post Salas</string>
-  
-  
-  
-  
-  
+
+
+  <!-- Daniel -->
+
+    <string name="dan_login">Iniciar Sesion</string>
+    <string name="dan_username">Nombre de usuario</string>
+    <string name="dan_Password">Contraseña</string>
+    <string name="dan_wrongConection">Error de conexion</string>
+    <string name="dan_fill">Por favor, rellene los campos</string>
+    <string name="dan_welcome">Bienvenido/a</string>
+    <string name="dan_BadCredential">Credenciales incorrectas</string>
+    <string name="dan_BadResponse">Error en la respuesta</string>
+    <string name="dan_goRoomsInfo">Salas</string>
+
 
 
     <string name="errorFields">Porfavor rellena todos los campos</string>

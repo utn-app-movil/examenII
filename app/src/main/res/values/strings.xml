@@ -1,5 +1,20 @@
 <resources>
 
+
+    <!-- Daniel -->
+
+    <string name="dan_login">Log In</string>
+    <string name="dan_username">Username</string>
+    <string name="dan_Password">Password</string>
+    <string name="dan_wrongConection">Error conection</string>
+    <string name="dan_fill">Please, fill the fields</string>
+    <string name="dan_welcome">Welcome</string>
+    <string name="dan_BadCredential">Bad credentials</string>
+    <string name="dan_BadResponse">Bad Response</string>
+    <string name="dan_goRoomsInfo">Rooms</string>
+
+
+
     <string name="txt_id">User name</string>
     <string name="txt_password">Paswword</string>
     <string name="btn_login">Login</string>
