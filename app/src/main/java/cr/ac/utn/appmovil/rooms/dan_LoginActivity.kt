@@ -20,7 +20,7 @@ import org.json.JSONObject
 import java.io.IOException
 
 
-class LoginActivity : AppCompatActivity() {
+class dan_LoginActivity : AppCompatActivity() {
         lateinit var  usernameEditText: EditText
         lateinit var  passwordEditText: EditText
         lateinit var  loginButton: Button
@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(
-                    this@LoginActivity,
+                    this@dan_LoginActivity,
                     "${getString(R.string.dan_fill)}",
                     Toast.LENGTH_SHORT
                 ).show()
@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         client.newCall(request).enqueue(object : okhttp3.Callback {
             override fun onFailure(call: Call, e: IOException) {
                 runOnUiThread {
-                    Toast.makeText(this@LoginActivity, "${getString(R.string.dan_wrongConection)}: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@dan_LoginActivity, "${getString(R.string.dan_wrongConection)}: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -88,16 +88,16 @@ class LoginActivity : AppCompatActivity() {
 
                         if (responseCode == "INFO_FOUND") {
                             val data = jsonResponse.getJSONObject("data")
-                            val userId = data.getString("user") // Aquí cambiamos "id" por "user"
+                            val userId = data.getString("user")
                             val userName = data.getString("name")
                             val userLastName = data.getString("lastname")
                             val userEmail = data.getString("emailname")
 
                             runOnUiThread {
-                                Toast.makeText(this@LoginActivity, "${getString(R.string.dan_welcome)}, $userName $userLastName!", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@dan_LoginActivity, "${getString(R.string.dan_welcome)}, $userName $userLastName!", Toast.LENGTH_SHORT).show()
 
                                 // Ahora pasamos los datos al siguiente Activity
-                                val intent = Intent(this@LoginActivity, dan_Main::class.java).apply {
+                                val intent = Intent(this@dan_LoginActivity, dan_Main::class.java).apply {
                                     putExtra("user", userId)
                                     putExtra("name", userName)
                                     putExtra("lastname", userLastName)
@@ -108,17 +108,17 @@ class LoginActivity : AppCompatActivity() {
                             }
                         } else {
                             runOnUiThread {
-                                Toast.makeText(this@LoginActivity, "${R.string.dan_BadCredential}", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@dan_LoginActivity, "${R.string.dan_BadCredential}", Toast.LENGTH_SHORT).show()
                             }
                         }
                     } catch (e: Exception) {
                         runOnUiThread {
-                            Toast.makeText(this@LoginActivity, "${R.string.dan_BadResponse}: ${e.message}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@dan_LoginActivity, "${R.string.dan_BadResponse}: ${e.message}", Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
                     runOnUiThread {
-                        Toast.makeText(this@LoginActivity, "${R.string.dan_BadCredential}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@dan_LoginActivity, "${R.string.dan_BadCredential}", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

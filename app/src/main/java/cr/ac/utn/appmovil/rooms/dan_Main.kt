@@ -11,7 +11,10 @@ import androidx.core.view.WindowInsetsCompat
 class dan_Main : AppCompatActivity() {
 
     lateinit var dan_btnGoRoom: Button
+    private var username: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        username = intent.getStringExtra("username")
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_dan_main)
@@ -22,7 +25,9 @@ class dan_Main : AppCompatActivity() {
         }
         dan_btnGoRoom = findViewById<Button>(R.id.dan_goRoom)
         dan_btnGoRoom.setOnClickListener {
-            val intent = Intent(this, rooms_dan_Activity::class.java)
+            val intent = Intent(this, rooms_dan_Activity::class.java).apply {
+                putExtra("username", username)
+            }
             startActivity(intent)
         }
     }

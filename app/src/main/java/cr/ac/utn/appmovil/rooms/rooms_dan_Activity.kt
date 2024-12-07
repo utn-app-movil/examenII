@@ -14,6 +14,7 @@ import java.io.IOException
 
 class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickListener {
 
+    private var username: String? = null
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: dan_RoomsAdapter
     private val rooms = mutableListOf<Room>()
@@ -26,7 +27,7 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = dan_RoomsAdapter(rooms, this)
         recyclerView.adapter = adapter
-
+        username = intent.getStringExtra("username")
         findViewById<Button>(R.id.dan_buttonRefresh).setOnClickListener {
             fetchRooms()
         }
@@ -55,7 +56,7 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
                     val responseBody = response.body?.string()
                     try {
                         val jsonObject = JSONObject(responseBody)
-                        val jsonArray = jsonObject.getJSONArray("data") // Extraer el JSONArray del JSONObject
+                        val jsonArray = jsonObject.getJSONArray("data")
                         rooms.clear()
                         for (i in 0 until jsonArray.length()) {
                             val roomObject = jsonArray.getJSONObject(i)
@@ -90,7 +91,7 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
 
         val json = JSONObject().apply {
             put("room", room.id)
-            put("username", "estudiante") // Asegúrate de usar el nombre de usuario del usuario autenticado
+            put("username", username)
         }
 
         val body = RequestBody.create("application/json; charset=utf-8".toMediaType(), json.toString())

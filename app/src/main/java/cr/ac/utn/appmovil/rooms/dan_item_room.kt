@@ -91,7 +91,7 @@ class dan_Main : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickListener {
 
         val json = JSONObject().apply {
             put("room", room.id)
-            put("username", "estudiante") // Asegúrate de usar el nombre de usuario del usuario autenticado
+            put("username", "estudiante")
         }
 
         val body = RequestBody.create("application/json; charset=utf-8".toMediaType(), json.toString())
