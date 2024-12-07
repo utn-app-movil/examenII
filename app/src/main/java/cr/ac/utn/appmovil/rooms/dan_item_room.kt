@@ -10,6 +10,7 @@ import cr.ac.utn.appmovil.rooms.R
 import cr.ac.utn.appmovil.rooms.Room
 import cr.ac.utn.appmovil.rooms.dan_RoomsAdapter
 import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -22,7 +23,7 @@ class dan_Main : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dan_rooms)
 
         recyclerView = findViewById(R.id.dan_recyclerViewRooms)
         recyclerView.layoutManager = LinearLayoutManager(this)

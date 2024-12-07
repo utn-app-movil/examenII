@@ -20,7 +20,7 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dan_rooms)
 
         recyclerView = findViewById(R.id.dan_recyclerViewRooms)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -54,14 +54,15 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
                 if (response.isSuccessful) {
                     val responseBody = response.body?.string()
                     try {
-                        val jsonArray = JSONArray(responseBody)
+                        val jsonObject = JSONObject(responseBody)
+                        val jsonArray = jsonObject.getJSONArray("data") // Extraer el JSONArray del JSONObject
                         rooms.clear()
                         for (i in 0 until jsonArray.length()) {
-                            val jsonObject = jsonArray.getJSONObject(i)
+                            val roomObject = jsonArray.getJSONObject(i)
                             val room = Room(
-                                jsonObject.getString("id"),
-                                jsonObject.getString("name"),
-                                jsonObject.getBoolean("isBooked")
+                                roomObject.getString("room"),
+                                roomObject.getString("room"),
+                                roomObject.getBoolean("is_busy")
                             )
                             rooms.add(room)
                         }
@@ -81,6 +82,7 @@ class rooms_dan_Activity : AppCompatActivity(), dan_RoomsAdapter.OnRoomClickList
             }
         })
     }
+
 
     override fun onBookClick(room: Room) {
         val url = "https://roomsapi.azurewebsites.net/rooms/booking"
