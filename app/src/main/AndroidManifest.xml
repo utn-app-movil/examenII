@@ -45,13 +45,8 @@
         <activity
             android:name=".jon_LoginActivity"
             android:exported="true" />
-       
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
-
-   
             android:name=".ken_RoomsActivity"
             android:exported="false" />
         <activity
@@ -115,8 +110,6 @@
         <activity
             android:name=".rooms_dan_Activity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+
     </application>
 </manifest>
