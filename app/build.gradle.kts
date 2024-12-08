@@ -42,6 +42,8 @@ android {
 }
 
 dependencies {
+
+
     // Retrofit con Kotlin Serialization
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
@@ -96,6 +98,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
 
+<<<<<<< HEAD
+=======
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
@@ -107,4 +111,5 @@ dependencies {
     implementation (libs.material.v190 )
 
     
+>>>>>>> 9da43a84acdc18d9afd15a7921ed6bd705874661
 }

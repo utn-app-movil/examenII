@@ -43,6 +43,13 @@
             android:name=".jon_RoomListActivity"
             android:exported="false" />
         <activity
+            android:name=".pau_salasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pau_MainActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".jon_LoginActivity"
             android:exported="true" />
 
@@ -67,6 +74,9 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
         </activity>
 
         <!-- Actividad de Login -->
@@ -112,4 +122,5 @@
             android:exported="false" />
 
     </application>
+
 </manifest>
