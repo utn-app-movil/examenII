@@ -1,21 +1,26 @@
 package cr.ac.utn.appmovil.rooms
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import util.bai_Util
+import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        // Abrir Projecto de Bairon Vega
-        val bai_btnExamenII: Button = findViewById<Button>(R.id.bai_btnExamenII)
-        bai_btnExamenII.setOnClickListener(View.OnClickListener { view ->
-            bai_Util.openActivity(this, bai_LoginActivity::class.java)
-        })
+        val sharedPreferences: SharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+
+        if (isLoggedIn) {
+            val intent = Intent(this, val_RoomsActivity::class.java)
+            startActivity(intent)
+        } else {
+            val intent = Intent(this, val_LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        finish()
     }
 }
