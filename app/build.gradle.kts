@@ -1,4 +1,3 @@
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -107,4 +106,5 @@ dependencies {
     implementation (libs.converter.gson)
     implementation (libs.material.v190 )
 
+    
 }
