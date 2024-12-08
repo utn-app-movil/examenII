@@ -6,23 +6,30 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class mjo_ReservationAdapter(private val reservations: List<String>, param: (Any) -> Unit) : RecyclerView.Adapter<mjo_ReservationAdapter.mjo_ReservationAdapter.ViewHolder>() {
+class mjo_ReservationAdapter(
+    private val reservations: List<String>,
+    private val onRoomClicked: (String) -> Unit
+) : RecyclerView.Adapter<mjo_ReservationAdapter.ReservationViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val reservationTitle: TextView = view.findViewById(R.id.reservationTitle)
-        val reservationDetails: TextView = view.findViewById(R.id.releaseRoomButton)
+    inner class ReservationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val reservationTitle: TextView = itemView.findViewById(R.id.reservationTitle)
+        val reservationDetails: TextView = itemView.findViewById(R.id.recyclerViewReservations)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReservationViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.mjo_activity_reservation_details, parent, false)
-        return ViewHolder(view)
+            .inflate(R.layout.mjo_activity_reservation_room, parent, false)
+        return ReservationViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ReservationViewHolder, position: Int) {
         val reservation = reservations[position]
         holder.reservationTitle.text = reservation
         holder.reservationDetails.text = "Reservation details $position"
+
+        holder.itemView.setOnClickListener {
+            onRoomClicked(reservation)
+        }
     }
 
     override fun getItemCount() = reservations.size
