@@ -7,4 +7,158 @@
     <string name="pau_login_btn">boton de logueo</string>
     <string name="pau_refresh_btn">refrescar</string>
     <string name="pau_RecycleView">contenedor</string>
+
+
+  <!-- Daniel -->
+
+    <string name="dan_login">Iniciar Sesion</string>
+    <string name="dan_username">Nombre de usuario</string>
+    <string name="dan_Password">Contraseña</string>
+    <string name="dan_wrongConection">Error de conexion</string>
+    <string name="dan_fill">Por favor, rellene los campos</string>
+    <string name="dan_welcome">Bienvenido/a</string>
+    <string name="dan_BadCredential">Credenciales incorrectas</string>
+    <string name="dan_BadResponse">Error en la respuesta</string>
+    <string name="dan_goRoomsInfo">Salas</string>
+
+
+
+    <string name="errorFields">Porfavor rellena todos los campos</string>
+    <string name="room_status_icon">Estado del cuarto</string>
+    <string name="ken_busy">Ocupada</string>
+    <string name="ken_free">Disponible</string>
+    <string name="ken_allfields">Complete todos los cambios</string>
+    <string name="ken_errorauth">Error de autenticacion</string>
+    <string name="txt_id">Nombre</string>
+    <string name="txt_password">conraseña</string>
+    <string name="btn_login">Iniciar sesion</string>
+    <string name="wrong">Algo salio mal</string>
+    <string name="welc">Bienvenido</string>
+    <string name="auth_faile">Error de autenticacion</string>
+    <string name="server_error">errormdel servidor</string>
+    <string name="connection_error">error de conexion</string>
+
+
+    <string name="emma_login_title">Login</string>
+    <string name="emma_username_hint">User</string>
+    <string name="emma_password_hint">Password</string>
+    <string name="emma_login_button">Login</string>
+    <string name="emma_login_error_empty">Please complete all fields</string>
+    <string name="emma_login_error_network">Network error</string>
+    <string name="emma_login_error_auth">Error when logging in</string>
+    <string name="emma_room_title">Room Management</string>
+    <string name="emma_refresh_button">Refresh</string>
+    <string name="emma_no_rooms_found">No rooms found</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar sesión</string>
+    <string name="login_empty_fields">Por favor, ingrese todos los datos.</string>
+    <string name="login_successful">Logueo exitoso!</string>
+    <string name="login_error">Usuario o contraseña incorrectos.</string>
+    <string name="network_error">Error: %1$s</string>
+    <string name="jus_refresh_rooms">Refrescar Salas</string>
+    <string name="jus_booking_successful">Sala reservada con éxito</string>
+    <string name="jus_busy_status">Ocupada por %1$s</string>
+    <string name="jus_free_status">Disponible</string>
+    <string name="jus_btn_refresh">Refrescar Salas</string>
+    <string name="jus_rooms_loaded">Salas cargadas correctamente.</string>
+    <string name="jus_error_loading_rooms">Error al cargar salas: %1$s</string>
+    <string name="jus_unbooking_successful">Sala liberada con éxito</string>
+    <string name="jus_error_booking">Error al reservar sala: %1$s</string>
+    <string name="jus_error_unbooking">Error al liberar sala: %1$s</string>
+    <string name="jus_room_busy">Ocupada por %1$s</string>
+    <string name="jus_room_free">Disponible</string>
+    <string name="jus_room_capacity">Capacidad: %1$d</string>
+    <string name="jus_server_error_no_valid_data">El servidor no devolvió datos válidos.</string>
+    <string name="jus_http_error_code">Error HTTP: %1$d</string>
+    <string name="jus_success_booking">Sala reservada con éxito.</string>
+    <string name="jus_error_booking_room">Error al reservar la sala.</string>
+    <string name="jus_success_unbooking">Sala liberada con éxito.</string>
+    <string name="jus_error_unbooking_room">Error al liberar la sala.</string>
+
+    <string name="day_login">Iniciar sesión</string>
+    <string name="day_login_empty_fields">El usuario y la contraseña no pueden estar vacíos.</string>
+    <string name="day_login_successful">¡Inicio de sesión exitoso!</string>
+    <string name="day_login_error">Usuario o contraseña inválidos.</string>
+    <string name="day_network_error">Error de red: %1$s</string>
+    <string name="day_username_hint">Ingrese su usuario</string>
+    <string name="day_password_hint">Ingrese su contraseña</string>
+    <string name="day_login_button">Iniciar sesión</string>
+    <string name="day_refresh">Actualizar</string>
+    <string name="day_room_name">Nombre de la Sala</string>
+    <string name="day_room_capacity">Capacidad: %1$d</string>
+    <string name="day_room_available">Disponible</string>
+    <string name="day_room_occupied">Ocupada</string>
+    <string name="day_room_fetch_error">Error al cargar salas: %1$s</string>
+    <string name="day_room_reserve_success">Sala reservada exitosamente</string>
+    <string name="day_room_reserve_error">Error al reservar la sala: %1$s</string>
+    <string name="day_room_release_success">Sala liberada exitosamente</string>
+    <string name="day_room_release_error">Error al liberar la sala: %1$s</string>
+    <string name="day_unknown_user">Usuario desconocido</string>
+    <string name="day_rooms_loaded_success">Salas cargadas exitosamente</string>
+    <string name="day_no_rooms_available">No hay salas disponibles</string>
+    <string name="day_error_loading_rooms">Error al cargar las salas: %1$s</string>
+
+    <!-- Strings Bairon Vega -->
+    <string name="bai_username">Usuario</string>
+    <string name="bai_password">Contraseña</string>
+    <string name="bai_login_button_text">Inicio de sesión</string>
+    <string name="bai_login_empty_fields">Rellene todos los campos.</string>
+    <string name="bai_login_successful">Inicio de sesión correcto.</string>
+    <string name="bai_login_error">Nombre de usuario o contraseña incorrectos.</string>
+    <string name="bai_network_error">Error: %1$s</string>
+    <string name="bai_refresh_rooms">Habitaciones Refresh</string>
+    <string name="bai_busy_status">Ocupado por %1$s</string>
+    <string name="bai_free_status">Disponible</string>
+    <string name="bai_btn_refresh">"Refrescar Habitaciones "</string>
+    <string name="bai_rooms_loaded">Habitaciones cargadas con éxito.</string>
+    <string name="bai_error_loading_rooms">Error al cargar las salas: %1$s</string>
+    <string name="bai_booking_successful">Habitación reservada con éxito.</string>
+    <string name="bai_unbooking_successful">Habitación no reservada con éxito.</string>
+    <string name="bai_error_booking">Error al reservar habitación: %1$s</string>
+    <string name="bai_error_unbooking">Error al anular la reserva de la habitación: %1$s</string>
+    <string name="bai_room_busy">Ocupado por %1$s</string>
+    <string name="bai_room_free">Disponible</string>
+    <string name="bai_room_capacity">Capacidad: %1$d</string>
+    <string name="bai_server_error_no_valid_data">El servidor no ha devuelto datos válidos.</string>
+    <string name="bai_http_error_code">Error HTTP: %1$d</string>
+    <string name="bai_success_booking">Habitación reservada con éxito.</string>
+    <string name="bai_error_booking_room">Error al reservar la habitación.</string>
+    <string name="bai_success_unbooking">Habitación no reservada con éxito.</string>
+    <string name="bai_error_unbooking_room">Error al anular la reserva de la habitación.</string>
+
+    <!-- Strings Yohel -->
+    <string name="yoh_string_app_name">Gestión de Salas</string>
+    <string name="yoh_string_username">Usuario</string>
+    <string name="yoh_string_password">Contraseña</string>
+    <string name="yoh_string_btn_login">Iniciar sesión</string>
+    <string name="yoh_string_login_empty_fields">Por favor, complete todos los campos</string>
+    <string name="yoh_string_login_successful">Inicio de sesión exitoso</string>
+    <string name="yoh_string_login_error">Error durante el inicio de sesión</string>
+    <string name="yoh_string_network_error">Error de red: %1$s</string>
+    <string name="yoh_string_rooms_loaded">Salas cargadas con éxito</string>
+    <string name="yoh_string_error_loading_rooms">Error al cargar las salas: %1$s</string>
+    <string name="yoh_string_success_booking">Sala reservada con éxito</string>
+    <string name="yoh_string_error_booking_room">Error al reservar la sala</string>
+    <string name="yoh_string_success_unbooking">Sala liberada con éxito</string>
+    <string name="yoh_string_error_unbooking_room">Error al liberar la sala</string>
+    <string name="yoh_string_btn_refresh">Actualizar</string>
+    <string name="yoh_string_room_capacity">Capacidad: %1$d</string>
+    <string name="yoh_string_room_free">Disponible</string>
+    <string name="yoh_string_room_busy">Ocupada por %1$s</string>
+    <string name="yoh_string_server_error_no_valid_data">No se recuperaron datos válidos del servidor</string>
+    <string name="yoh_string_http_error_code">Error HTTP: %1$s</string>
+    <string name="yoh_string_refresh">Actualizar</string>
+    <string name="yoh_string_error_booking">Error al reservar la sala: %1$s</string>
+    <string name="yoh_string_error_unbooking">Error al liberar la sala: %1$s</string>
+<!-- Strings Keylor -->
+    <string name="Key_msg_loginSu">Inicie sesión correctamente: %1$s</string>
+    <string name="Key_msg_Inco_creden">Credenciales incorrectas</string>
+    <string name="Key_msg_net_error">Error de red: %1$s</string>
+    <string name="Key_msg_complete_info">Por favor completa los campos</string>
+    <string name="Key_msg_unauthenticate_user">usuario no autenticado</string>
+    <string name="Key_msg_select_room">seleccione una sala</string>
+    <string name="Key_msg_reserved_room">sala reservada</string>
+    <string name="Key_msg_error_rom">"Error al reservar la sala "</string>
+    <string name="Key_msg_room_released">sala liberada</string>
 </resources>
